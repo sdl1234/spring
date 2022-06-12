@@ -13,7 +13,7 @@ public class Test {
 
 
     public static void main(String[] args) {
-
+        //启动项
         SdlApplicationContest applicationContest = new SdlApplicationContest(AppConfig.class);
     }
 }
