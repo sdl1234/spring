@@ -14,6 +14,6 @@ public class Test {
 
     public static void main(String[] args) {
 
-        SdlApplicationContest applicationContest = new SdlApplicationContest();
+        SdlApplicationContest applicationContest = new SdlApplicationContest(AppConfig.class);
     }
 }
