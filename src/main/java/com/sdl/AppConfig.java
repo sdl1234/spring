@@ -1,5 +1,7 @@
 package com.sdl;
 
+import com.spring.ComponentScan;
+
 /**
  * @PackageName: com.sdl
  * @ClassName: AppConfig
@@ -7,5 +9,6 @@ package com.sdl;
  * @author: sdl
  * @date: 2022/6/13/2:26
  */
-public class AppConfig {
+@ComponentScan("com.sdl.service")
+public class  AppConfig {
 }
