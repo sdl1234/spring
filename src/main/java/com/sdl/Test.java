@@ -1,6 +1,6 @@
 package com.sdl;
 
-import com.spring.SdlApplicationContest;
+import com.spring.SdlApplicationContext;
 
 /**
  * @PackageName: com.sdl
@@ -14,7 +14,7 @@ public class Test {
 
     public static void main(String[] args) {
         //启动项
-        SdlApplicationContest applicationContest = new SdlApplicationContest(AppConfig.class);
+        SdlApplicationContext applicationContest = new SdlApplicationContext(AppConfig.class);
 
         System.out.println(applicationContest.getBean("userService"));
         System.out.println(applicationContest.getBean("userService"));

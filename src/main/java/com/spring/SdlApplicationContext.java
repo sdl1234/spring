@@ -1,7 +1,6 @@
 package com.spring;
 
 import java.io.File;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Map;
@@ -14,19 +13,30 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author: sdl
  * @date: 2022/6/13/2:23
  */
-public class SdlApplicationContest {
+public class SdlApplicationContext {
 
 
     private Class configClass;
 
+    /**
+     * 单利
+     */
     private final String SINGLETON = "singleton";
 
+    /**
+     * 单利池
+     */
     private final ConcurrentHashMap<String, Object> singletonPool = new ConcurrentHashMap<>();
+
+    /**
+     * bean定义map
+     */
     private final ConcurrentHashMap<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
-    public SdlApplicationContest(Class configClass) {
+    public SdlApplicationContext(Class configClass) {
         this.configClass = configClass;
 
+        //扫描bean
         scan(configClass);
 
         //创建bean
@@ -72,7 +82,7 @@ public class SdlApplicationContest {
 //        System.out.println(path);
 
 
-        ClassLoader classLoader = SdlApplicationContest.class.getClassLoader();
+        ClassLoader classLoader = SdlApplicationContext.class.getClassLoader();
         URL loaderResource = classLoader.getResource(path);
 //        System.out.println(loaderResource);
         File file = new File(loaderResource.getFile());
