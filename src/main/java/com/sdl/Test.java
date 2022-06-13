@@ -15,5 +15,9 @@ public class Test {
     public static void main(String[] args) {
         //启动项
         SdlApplicationContest applicationContest = new SdlApplicationContest(AppConfig.class);
+
+        System.out.println(applicationContest.getBean("userService"));
+        System.out.println(applicationContest.getBean("userService"));
+        System.out.println(applicationContest.getBean("userService"));
     }
 }
