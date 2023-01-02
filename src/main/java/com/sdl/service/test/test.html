@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="test()"> test</button>
+
+</body>
+</html>
+
+
+<script>
+
+    function test(){
+
+        let map = new Map();
+        let map2 = new Map();
+        map.set("data1","1")
+        map.set("data2","2")
+        map.set("data3","4")
+        map.set("data3","3")
+        map.set("data3","3")
+        map.set("data3","3")
+
+        var data = [];
+        map.forEach((value, key) => {
+            data.push({
+                "label":key,
+                "value": value
+            })
+        })
+        console.log(map.size);
+        console.log(data)
+
+
+    }
+
+
+
+</script>
